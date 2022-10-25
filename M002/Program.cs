@@ -95,6 +95,9 @@ Newline"; //If I want to write a newline I have to type an actual newline
 
 			int x = Convert.ToInt32(Console.ReadLine()); //Convert instead of parse (old)
 			Console.WriteLine(x * 5);
+
+			char c = Console.ReadKey().KeyChar; //Read a single character and save it into a char
+			ConsoleKey ck = Console.ReadKey().Key; //Checks for a key (can hold a key with multiple characters like F1, Delete, ...)
 			#endregion
 
 			//Ctrl + K, Ctrl + C: Comment out selected lines
