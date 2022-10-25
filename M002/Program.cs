@@ -81,20 +81,20 @@ Newline"; //If I want to write a newline I have to type an actual newline
 			#endregion
 
 			#region Input
-			//string strInput = Console.ReadLine(); //Console.ReadLine() to wait for an input of the user, program stops until enter is pressed
-			//Console.WriteLine(strInput);
+			string strInput = Console.ReadLine(); //Console.ReadLine() to wait for an input of the user, program stops until enter is pressed
+			Console.WriteLine(strInput);
 
-			//int intInput = int.Parse(Console.ReadLine()); //int.Parse: Converts a string into an integer
-			//Console.WriteLine(intInput * 5);
+			int intInput = int.Parse(Console.ReadLine()); //int.Parse: Converts a string into an integer
+			Console.WriteLine(intInput * 5);
 
-			//double doubleInput = double.Parse(Console.ReadLine()); //parse also exists in double
-			//Console.WriteLine(doubleInput);
+			double doubleInput = double.Parse(Console.ReadLine()); //parse also exists in double
+			Console.WriteLine(doubleInput);
 
-			//char inputChar = Console.ReadKey().KeyChar; //Take only a single character from the user, do not wait for enter
-			//Console.WriteLine(inputChar);
+			char inputChar = Console.ReadKey().KeyChar; //Take only a single character from the user, do not wait for enter
+			Console.WriteLine(inputChar);
 
-			//int x = Convert.ToInt32(Console.ReadLine()); //Convert instead of parse (old)
-			//Console.WriteLine(x * 5);
+			int x = Convert.ToInt32(Console.ReadLine()); //Convert instead of parse (old)
+			Console.WriteLine(x * 5);
 			#endregion
 
 			//Ctrl + K, Ctrl + C: Comment out selected lines
@@ -110,6 +110,7 @@ Newline"; //If I want to write a newline I have to type an actual newline
 			float f = (float) d; //Force conversion, double is larger than float
 
 			string s = d.ToString(); //Converts any value to a string
+			double c = double.Parse(s); //Convert the string back to double
 			#endregion
 
 			#region Arithmetics
