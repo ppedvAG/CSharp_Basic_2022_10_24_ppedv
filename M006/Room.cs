@@ -4,7 +4,7 @@ namespace M006;
 
 internal class Room
 {
-	public Door Door { get; set; }
+	public Door Door { get; private set; }
 
 	public Window[] Windows = new Window[10];
 

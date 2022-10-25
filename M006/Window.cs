@@ -67,6 +67,7 @@ internal class Window
 			Console.WriteLine("The window is already open");
 	}
 
+	#region Constructor
 	public Window() { } //Default constructor, every object has one
 
 	//Constructor: Sets the default values of the object at creation
@@ -83,6 +84,7 @@ internal class Window
 	{
 		this.state = state;
 	}
+	#endregion
 }
 
 enum WindowState
