@@ -21,6 +21,23 @@ public class LabCode
 			new Car(10, 217, Brand.Audi),
 			new Car(11, 125, Brand.Audi)
 		};
+
+		cars.Where(c => c.SeatList.Count == 6);
+
+		cars.Sum(c => c.SeatList.Count);
+
+		cars.OrderBy(c => c.Brand).ThenBy(c => c.MaxV);
+
+		cars.Where(c => c.SeatList.Any(e => e.IsOccupied));
+		cars.Where(c => c.SeatList.Count(e => e.IsOccupied) > 0);
+
+		cars.Where(c => c.MaxV > cars.Average(e => e.MaxV));
+
+		cars.Where(c => c.SeatList.Count(s => s.IsOccupied) > c.SeatList.Count / 2d);
+
+		Dictionary<Brand, Car> x = cars.OrderByDescending(c => c.MaxV).DistinctBy(c => c.Brand).ToDictionary(c => c.Brand, c => c);
+
+		Dictionary<int, Car> y = cars.OrderByDescending(c => c.MaxV).DistinctBy(c => c.SeatList.Count).ToDictionary(c => c.SeatList.Count, c => c);
 	}
 }
 
